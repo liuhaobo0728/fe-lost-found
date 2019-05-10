@@ -2,7 +2,7 @@
   <div class="userinfo">
     <div class="form">
       <p class="register-title">信息填写</p>
-      <div class="imgfile">
+      <!-- <div class="imgfile">
         <h3 class="filetitle">请上传头像：</h3>
         <input type="file" @change="previewFile()" ref="file">
       </div>
@@ -14,7 +14,7 @@
           height="200"
           alt="Image preview..."
         >
-      </div>
+      </div>-->
       <span class="title-name">请输入用户昵称</span>
       <el-input v-model="user.userNick" placeholder="请输入用户昵称"/>
       <span class="title-name">请输入手机号</span>
@@ -71,18 +71,18 @@ export default {
           });
         }
       });
-      const formdata = new FormData();
-      formdata.append("file", this.filelist.file);
-      await this.$api.api
-        .uplodeItemImg(formdata, this.filelist.itemId)
-        .then(res => {
-          if (res.data.state === 0) {
-            alert("上传成功");
-          }
-        });
-      this.$router.push({
-        path: "/"
-      });
+      // const formdata = new FormData();
+      // formdata.append("file", this.filelist.file);
+      // await this.$api.api
+      //   .uplodeItemImg(formdata, this.filelist.itemId)
+      //   .then(res => {
+      //     if (res.data.state === 0) {
+      //       alert("上传成功");
+      //     }
+      //     this.$router.push({
+      //       path: "/touser/login"
+      //     });
+      //   });
     },
     register() {
       this.$api.api.goUserInfo(this.user).then(res => {

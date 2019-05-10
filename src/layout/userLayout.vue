@@ -10,7 +10,7 @@ export default {
   methods: {
     gohome() {
       this.$router.push({
-        path: "/home/mian"
+        path: "/"
       });
     }
   }
@@ -27,6 +27,7 @@ export default {
     position: absolute;
     top: 20px;
     left: 100px;
+    cursor: pointer;
   }
 }
 </style>

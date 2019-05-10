@@ -106,7 +106,7 @@ export default {
     },
     fen() {
       const params = {
-        link: `http://${ip.localhost}:8080/phone?id=${this.params.itemId}`
+        link: `http://${ip.localhost}/phone?id=${this.params.itemId}`
       };
       this.shower = !this.shower;
       if (this.shower === true) {
